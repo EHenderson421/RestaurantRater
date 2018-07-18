@@ -31,5 +31,7 @@ namespace RestaurantRater.Models
         }
 
         public System.Data.Entity.DbSet<RestaurantRater.Models.Client> Clients { get; set; }
+
+        public System.Data.Entity.DbSet<RestaurantRater.Models.Restaurant> Restaurants { get; set; }
     }
 }
