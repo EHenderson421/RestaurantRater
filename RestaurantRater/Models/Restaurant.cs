@@ -17,7 +17,7 @@ namespace RestaurantRater.Models
         [Display(Name = "Cuisine")]
         public string Cuisine { get; set; }
 
-        [Display(Name = "TotalRating")]
+        [Display(Name = "Total Rating")]
         public string TotalRating { get; set; }
 
 
