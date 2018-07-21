@@ -52,7 +52,7 @@ namespace RestaurantRater.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RestaurantId,RestaurantName,Cuisine,TotalRating")] Restaurant restaurant)
+        public ActionResult Create([Bind(Include = "RestaurantId,RestaurantName,Cuisine")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +84,7 @@ namespace RestaurantRater.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RestaurantId,RestaurantName,Cuisine,TotalRating")] Restaurant restaurant)
+        public ActionResult Edit([Bind(Include = "RestaurantId,RestaurantName,Cuisine")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
             {
