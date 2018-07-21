@@ -19,22 +19,11 @@
         </th>
         <th>
            Total Rating
-            @*@Html.DisplayNameFor(model => model.TotalRating)*@
         </th>
         <th></th>
     </tr>
 
-
-
-    @*<tr>
-        <td>
-            <div id="rating2"></div>
-        </td>
-
-        <td>
-            <div id="rating3"></div>
-        </td>
-    </tr>*@
+       
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -45,13 +34,7 @@
         </td>
 
         <td>
-            @*<div id="@Html.DisplayFor(modelItem => item.RestaurantId)"> </div>*@
-            
-            <div class="wpac-rating" data-wpac-chan="@Html.DisplayFor(modelItem => item.RestaurantId)"> </div>
-                @*<div id="rating3"></div>*@
-
-
-                @*@Html.DisplayFor(modelItem => item.TotalRating)*@
+           <div class="wpac-rating" data-wpac-chan="@Html.DisplayFor(modelItem => item.RestaurantId)"> </div>
         </td>
          
         
