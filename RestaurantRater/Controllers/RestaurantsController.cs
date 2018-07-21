@@ -13,10 +13,16 @@ namespace RestaurantRater.Controllers
     public class RestaurantsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         // GET: Restaurants
         public ActionResult Index()
         {
+            //var ratingNumber = new List<int> { 1, 2 };
+            //foreach (int element in ratingNumber)
+            //{
+            //    count++;
+            //    return Index();
+            //}
             return View(db.Restaurants.ToList());
         }
 

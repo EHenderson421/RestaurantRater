@@ -18,11 +18,23 @@
             @Html.DisplayNameFor(model => model.Cuisine)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TotalRating)
+           Total Rating
+            @*@Html.DisplayNameFor(model => model.TotalRating)*@
         </th>
         <th></th>
     </tr>
 
+
+
+    @*<tr>
+        <td>
+            <div id="rating2"></div>
+        </td>
+
+        <td>
+            <div id="rating3"></div>
+        </td>
+    </tr>*@
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -31,13 +43,22 @@
         <td>
             @Html.DisplayFor(modelItem => item.Cuisine)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.TotalRating)
+            @*<div id="@Html.DisplayFor(modelItem => item.RestaurantId)"> </div>*@
+            
+            <div class="wpac-rating" data-wpac-chan="@Html.DisplayFor(modelItem => item.RestaurantId)"> </div>
+                @*<div id="rating3"></div>*@
+
+
+                @*@Html.DisplayFor(modelItem => item.TotalRating)*@
         </td>
+         
+        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RestaurantId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RestaurantId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RestaurantId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.RestaurantId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RestaurantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RestaurantId })
         </td>
     </tr>
 }
